@@ -31,5 +31,7 @@ module KittenKorner
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    # fixing rake assets:precompile error when deploying to heroku
+    config.assets.initialize_on_precompile = false
   end
 end
