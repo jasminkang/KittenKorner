@@ -34,16 +34,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :sold %>
-    <%= form.check_box :sold %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :category_id %>
     <%= form.select :category_id, @categories.map {|c| [c.name, c.id]} %>
   </div>
