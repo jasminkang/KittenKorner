@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_13_050826) do
+ActiveRecord::Schema.define(version: 2022_07_15_035955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,33 +96,6 @@ ActiveRecord::Schema.define(version: 2022_07_13_050826) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "watch_items", force: :cascade do |t|
-    t.bigint "watchlist_id", null: false
-    t.bigint "listing_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["listing_id"], name: "index_watch_items_on_listing_id"
-    t.index ["watchlist_id"], name: "index_watch_items_on_watchlist_id"
-  end
-
-  create_table "watchlisteds", force: :cascade do |t|
-    t.bigint "listing_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["listing_id"], name: "index_watchlisteds_on_listing_id"
-    t.index ["user_id"], name: "index_watchlisteds_on_user_id"
-  end
-
-  create_table "watchlists", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "listing_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["listing_id"], name: "index_watchlists_on_listing_id"
-    t.index ["user_id"], name: "index_watchlists_on_user_id"
-  end
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "listings", "categories"
@@ -130,10 +103,4 @@ ActiveRecord::Schema.define(version: 2022_07_13_050826) do
   add_foreign_key "orders", "listings"
   add_foreign_key "orders", "users", column: "buyer_id"
   add_foreign_key "orders", "users", column: "seller_id"
-  add_foreign_key "watch_items", "listings"
-  add_foreign_key "watch_items", "watchlists"
-  add_foreign_key "watchlisteds", "listings"
-  add_foreign_key "watchlisteds", "users"
-  add_foreign_key "watchlists", "listings"
-  add_foreign_key "watchlists", "users"
 end
