@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  before_action :set_listing, only: %i[ show edit update destroy place_order add_to_watchlist ]
+  before_action :set_listing, only: %i[ show edit update destroy place_order ]
   before_action :set_form_vars, only: %i[ new edit ]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :authorize_user, only: [:edit, :update, :destroy]
@@ -72,14 +72,6 @@ class ListingsController < ApplicationController
 
     redirect_to orders_success_path
   end
-
-  def add_to_watchlist
-    Watchlisted.create(
-      listing_id: @listing.id,
-      user_id: current_user.id
-    )
-
-    redirect_to watchlisted_path
     
   end
 
@@ -105,4 +97,4 @@ class ListingsController < ApplicationController
     def listing_params
       params.require(:listing).permit(:title, :description, :condition, :price, :sold, :user_id, :category_id, :picture)
     end
-end
+
