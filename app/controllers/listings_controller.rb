@@ -72,8 +72,10 @@ class ListingsController < ApplicationController
 
     redirect_to orders_success_path
   end
-    
-  end
+
+
+
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listings</h1>
+<h1>My listings</h1>
 
 <table>
   <thead>
@@ -17,8 +17,8 @@
   </thead>
 
   <tbody>
-    <% @listings.each do |listing| %>
-      <% if listing.sold == false %> <tr>
+    <% @my_listings.each do |listing| %>
+      <% if listing.sold == false && user_signed_in? %> <tr>
         <td><%= listing.title %></td>
         <td><%= listing.description %></td>
         <td><%= listing.condition %></td>
@@ -27,6 +27,8 @@
         <td><%= listing.user_id %></td>
         <td><%= listing.category_id %></td>
         <td><%= link_to 'Show', listing %></td>
+        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
     </tr>
   <% end %>

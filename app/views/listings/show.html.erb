@@ -11,16 +11,12 @@
 <% if @listing.sold %>
   <h1>SOLD</h1>
 <% elsif current_user && current_user.id == @listing.user_id %>
-  <h1>Unfortunately, you cannot purchase your own item!</h1>
+  <h1>This is your listed item</h1>
 <% elsif current_user %>
   <%= button_to "Buy me!", place_order_path %>
 <% else %>
   <h1>Please log in to make a purchase</h1>
 <% end %>
-
-
-
-
 
 
 <p>

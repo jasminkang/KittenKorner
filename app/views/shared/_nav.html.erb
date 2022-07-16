@@ -4,6 +4,9 @@
 <span>
     <%= link_to "Bought items", orders_bought_path %>
     <%= link_to "Sold items", orders_sold_path %>
+    <% if user_signed_in? %>
+        <%= link_to "My listings", my_listings_path %>
+    <% end %>
 </span>
 
 <span style="float: right">
