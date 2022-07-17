@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
   
   def success
+    @success_item = current_user.bought_orders.last.seller.email
   end
 
   def bought

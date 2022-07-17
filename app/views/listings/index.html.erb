@@ -2,6 +2,9 @@
 
 <h1>Listings</h1>
 
+<% @categories.each do |cat| %>
+  <%= link_to cat.name, listings_path(:category => cat) %>
+<% end %>
 
 <table>
   <thead>
@@ -41,4 +44,4 @@
 
 <br>
 
-<%= link_to 'New Listing', new_listing_path %>
+
