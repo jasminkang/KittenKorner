@@ -1,16 +1,20 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: %i[ show edit update destroy place_order ]
-  before_action :set_form_vars, only: %i[ new edit ]
+  before_action :set_form_vars, only: %i[ new edit index ]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :authorize_user, only: [:edit, :update, :destroy]
 
   # GET /listings or /listings.json
   def index
-    @listings = Listing.all
+      @listings = Listing.all
   end
 
   # GET /listings/1 or /listings/1.json
   def show
+  end
+
+   def search
+    @listings = Listing.search(params[:search])
   end
 
   # GET /listings/new
@@ -74,7 +78,6 @@ class ListingsController < ApplicationController
   end
 
 
-
 end
 
   private
@@ -97,6 +100,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def listing_params
-      params.require(:listing).permit(:title, :description, :condition, :price, :sold, :user_id, :category_id, :picture)
+      params.require(:listing).permit(:title, :description, :condition, :price, :sold, :user_id, :category_id, :picture, :search)
     end
 

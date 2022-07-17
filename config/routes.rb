@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'listings/search', as: "listings_search"
   get 'orders/success'
   get 'orders/bought'
   get 'orders/sold'

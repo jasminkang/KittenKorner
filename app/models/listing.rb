@@ -11,4 +11,19 @@ class Listing < ApplicationRecord
      never_opened: 4
   }
 
+  def self.search(search)
+    if search
+      category_name = Category.find_by(name: search)
+      if category_name
+        self.where(name: category_name)
+      else
+        @listings = Listing.all
+      end
+    else
+    @listings = Listing.all
+
+  end
 end
+end
+
+
