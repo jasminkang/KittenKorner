@@ -44,6 +44,7 @@ Aimed at all cat and kitten caretakers, current or potential.
 ### Tech stack
 
 front-end: HTML5, CSS, SCSS, Getskeleton
+
 back-end: ruby on rails, postgresql
 
 ## User Stories
