@@ -27,26 +27,28 @@ The app is very simple, users can list and item for sale or browse a listed item
 Aimed at all cat and kitten caretakers, current or potential.
 
 ###Sitemap
-<ADD>
+![plot](docs/Sitemap.png)
 
 ###Screenshots
-<ADD>
-
+![plot](docs/snip_home.png)
+![plot](docs/snip_listing_index.png)
+![plot](docs/snip_listing.png)
+![plot](docs/snip_new_listing.png)
 
 ###Tech stack
 front-end: HTML5, CSS, SCSS, Getskeleton
 back-end: ruby on rails, postgresql
 
 ##User Stories (R12)
-<ADD>
+![plot](docs/Userstories.png)
 
 ##Wireframes (R13)
 
-<ADD>
+![plot](docs/Wireframe.png)
 
 ##ERD (R14)
 
-<ADD>
+![plot](docs/ERDv2.png)
 
 ##High level components (R15)
 Uses rails model of MVC:
