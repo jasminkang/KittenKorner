@@ -2,7 +2,7 @@
 
 Assignment submission for coder academy 2022, documentation requirements:
 
-# Kittenkorner
+## Kittenkorner
 
 Kittens can take a lot of energy, time and money to raise into happy, healthy cats! Not only are they energetic furballs who require constant play, but they also grow out of things (sometimes very quickly) resulting in a lot of waste.
 
@@ -20,7 +20,8 @@ There are a lot of petsitting websites, and general marketplace websites where c
 
 Visit here: <https://kittenkorner.herokuapp.com/>; <https://github.com/jasminkang/KittenKorner>
 
-##Functionality / Features (R11)
+## Functionality / Features (R11)
+
 The purpose of kittenkorner is to provide very easy, greener and cheaper cat related exchanges with locals. It could also allow for local community building with fellow cat owners, enriching cat and human lives alike.
 
 The app is very simple, users can list and item for sale or browse a listed item. Pages display basic historic info to the user. For privacy, contact details only available after the ‘purchase’ has been made. Would benefit from additional features, such as a wishlist, user messaging, and seller reviews.
@@ -92,7 +93,8 @@ One user can set up multiple listings for sale OR just browse existing listings.
 
 Listings model is other primary model. The methods for the other models exist here (category model, order model).
 
-## Project management 
+## Project management
+
 kept it too general because it was first time creating something on rails like this (end to end), have a better grasp for future what level of planning would actually be helpful, and how long tasks take for me to do when still new to coding.
 
 Used a trello board - link here: <https://trello.com/b/yPtVf1Xc/marketplace-app>. The timings on the board were too ambitious, but items were completed within one or two days of the deadline.
