@@ -22,7 +22,7 @@
   </thead>
 
   <tbody>
-    <% @listings.each do |listing| %>
+   <% @listings.each do |listing| %>
       <% if listing.sold == false %> <tr>
         <td><%= listing.title%></td>
         <td><%= listing.description %></td>
@@ -31,8 +31,6 @@
         <td><%= listing.category.name %></td>
         <td><%= image_tag listing.picture if listing.picture.attached? %></td>
         <td><%= link_to 'Show', listing %></td>
-        
-
     <% end %>
     </tr>
   <% end %>
