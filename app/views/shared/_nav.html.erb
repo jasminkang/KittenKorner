@@ -1,13 +1,13 @@
 <%= link_to "Home", root_path, class: "button button-primary" %>
 <%= link_to "Listings", listings_path, class: "button button-primary"%>
 
-<span class = "button" > 
+<% if user_signed_in? %>
+    <span class = "button" > 
     <%= link_to "Bought", orders_bought_path %>
     <%= link_to "Sold", orders_sold_path %>
-    <% if user_signed_in? %>
-        <%= link_to "Current", my_listings_path %>
+    <%= link_to "Current", my_listings_path %>
     <% end %>
-</span>
+    </span>
 
 <span style="float: right">
 
