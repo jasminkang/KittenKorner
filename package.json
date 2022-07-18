@@ -1,5 +1,5 @@
 {
-  "name": "KittenKorner",
+  "name": "kittenkorner",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
@@ -15,7 +15,7 @@
   },
   "version": "0.1.0",
   "engines": {
-  "node": "16.11.1"
+  "node": "16.13.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3"
