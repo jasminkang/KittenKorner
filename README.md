@@ -2,7 +2,7 @@
 
 Assignment submission for coder academy 2022, documentation requirements:
 
-# Kittenkorner (R6-R10)
+# Kittenkorner
 
 Kittens can take a lot of energy, time and money to raise into happy, healthy cats! Not only are they energetic furballs who require constant play, but they also grow out of things (sometimes very quickly) resulting in a lot of waste.
 
@@ -34,8 +34,11 @@ Aimed at all cat and kitten caretakers, current or potential.
 ### Screenshots
 
 ![plot](docs/snip_home.png)
+
 ![plot](docs/snip_listing_index.png)
+
 ![plot](docs/snip_listing.png)
+
 ![plot](docs/snip_new_listing.png)
 
 ### Tech stack
@@ -43,19 +46,19 @@ Aimed at all cat and kitten caretakers, current or potential.
 front-end: HTML5, CSS, SCSS, Getskeleton
 back-end: ruby on rails, postgresql
 
-## User Stories (R12)
+## User Stories
 
 ![plot](docs/Userstories.png)
 
-## Wireframes (R13)
+## Wireframes
 
 ![plot](docs/Wireframe.png)
 
-## ERD (R14)
+## ERD
 
 ![plot](docs/ERDv2.png)
 
-## High level components (R15)
+## High level components
 
 Uses rails model of MVC:
 
@@ -67,11 +70,11 @@ Methods defined here are the brains and vision of the application. In listings, 
 
 Views: in this version of the app views are essentially different records of each listing type (bought, sold, current, shopping etc.). These pages all inherit from helper classes for consistency. They also inherit from Action View which has predefined methods to help render the views when a response is requested.
 
-## Third party services (R16)
+## Third party services
 
 This app uses Heroku and devise
 
-## Model relationships and associations (R17)
+## Model relationships and associations
 
 User: association and authorization with devise. Users have many listings, and orders through the listing. A user must exist for a listing to be posted.
 
@@ -81,17 +84,14 @@ Order: Created when a user ‘buys’ a listing. belongs to a single listing, an
 
 Categories: Initialised with seed data to allow for listings to occur. One category for each listing, a listing belongs to a category.
 
-## Database relations (R18)
+## Database relations
 
 User model: ultimate owner of all other models.
 One user can set up multiple listings for sale OR just browse existing listings.
 
 Listings model is other primary model. The methods for the other models exist here (category model, order model).
 
-## Database scheme design (R19) <db/schema.rb>
-
-## Project management (R20)
-
+## Project management 
 kept it too general because it was first time creating something on rails like this (end to end), have a better grasp for future what level of planning would actually be helpful, and how long tasks take for me to do when still new to coding.
 
 Used a trello board - link here: <https://trello.com/b/yPtVf1Xc/marketplace-app>. The timings on the board were too ambitious, but items were completed within one or two days of the deadline.
