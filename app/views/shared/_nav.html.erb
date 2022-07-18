@@ -3,10 +3,8 @@
 
 <% if user_signed_in? %>
     <span class = "button" >
-    <% if Order.exists? %>
     <%= link_to "Bought", orders_bought_path %>
     <%= link_to "Sold", orders_sold_path %>
-    <% end %>
     <%= link_to "Current", my_listings_path %>
     <% end %>
     </span>
