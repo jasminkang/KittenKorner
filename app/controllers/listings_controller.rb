@@ -83,7 +83,7 @@ class ListingsController < ApplicationController
 
     redirect_to orders_success_path
   end
-
+end
 
 
 
