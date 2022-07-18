@@ -2,9 +2,13 @@
 <%= link_to "Listings", listings_path, class: "button button-primary"%>
 
 <% if user_signed_in? %>
-    <span class = "button" > 
+    <span class = "button" >
+    <% if current_user.bought_orders %>
     <%= link_to "Bought", orders_bought_path %>
+    <% end %>
+    <% if current_user.sold_orders %>
     <%= link_to "Sold", orders_sold_path %>
+    <% end%>
     <%= link_to "Current", my_listings_path %>
     <% end %>
     </span>
