@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   get 'orders/success'
   get 'orders/bought'
   get 'orders/sold'
-  get 'orders/bought'
-  get 'orders/sold'
+
 
   
   resources :listings
