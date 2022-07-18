@@ -2,8 +2,9 @@
 
 <h1>Listings</h1>
 
+<p> Or shop by category: </p>
 <% @categories.each do |cat| %>
-  <%= link_to cat.name.capitalize, listings_path(:category => cat) %>
+  <%= link_to cat.name.capitalize, listings_path(:category => cat), class: "button" %>
 <% end %>
 
 <table>
@@ -13,8 +14,6 @@
       <th>Description</th>
       <th>Condition</th>
       <th>Price</th>
-      <th>Sold</th>
-      <th>User</th>
       <th>Category</th>
       <th>Image</th>
       
@@ -29,8 +28,6 @@
         <td><%= listing.description %></td>
         <td><%= listing.condition %></td>
         <td><%= listing.price %></td>
-        <td><%= listing.sold %></td>
-        <td><%= listing.user.username%></td>
         <td><%= listing.category.name %></td>
         <td><%= image_tag listing.picture if listing.picture.attached? %></td>
         <td><%= link_to 'Show', listing %></td>

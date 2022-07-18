@@ -11,8 +11,7 @@
     </div>
   <% end %>
   <div class="field">
-    <%= form.label :guidelines %>
-    <p> List of guidelines here </p>
+    <p> Please adhere to the guidelines on the homepage</p>
 
   </div>
 
@@ -40,7 +39,7 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.select :category_id, @categories.map {|c| [c.name, c.id]} %>
+    <%= form.select :category_id, @categories.map {|c| [c.name.capitalize, c.id]} %>
   </div>
   
   <div class="field">
