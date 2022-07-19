@@ -239,6 +239,7 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk-s3 (~> 1.114)
   bootsnap (>= 1.4.2)
+  bundler (~> 2.3, >= 2.3.17)
   byebug
   devise (~> 4.8)
   factory_bot_rails
