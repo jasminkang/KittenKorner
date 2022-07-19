@@ -28,7 +28,6 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'spring'
 gem "aws-sdk-s3", "~> 1.114"
 
 group :development, :test do
@@ -36,6 +35,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'spring'
+
 end
 
 group :development do
